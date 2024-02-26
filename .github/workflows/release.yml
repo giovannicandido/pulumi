@@ -49,6 +49,6 @@ jobs:
         with:
           context: .
           push: true
-          build-args: ${{ inputs.pulumi_version }}
+          build-args: PULUMI_VERSION=${{ inputs.pulumi_version }}
           tags: ${{ steps.meta.outputs.tags }},${{ inputs.pulumi_version }}
           labels: ${{ steps.meta.outputs.labels }}
