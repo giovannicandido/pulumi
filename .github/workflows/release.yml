@@ -50,5 +50,5 @@ jobs:
           context: .
           push: true
           build-args: PULUMI_VERSION=${{ inputs.pulumi_version }}
-          tags: ${{ steps.meta.outputs.tags }},${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ inputs.pulumi_version }},${{ format('{0}/{1}:{2}', env.REGISTRY, env.IMAGE_NAME, inputs.pulumi_version) }}
+          tags: ${{ steps.meta.outputs.tags }},${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ inputs.pulumi_version }},${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
           labels: ${{ steps.meta.outputs.labels }}
